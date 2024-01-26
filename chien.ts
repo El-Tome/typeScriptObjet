@@ -1,12 +1,15 @@
 import Animal from './animal.js';
+
 export default class Chien extends Animal {
-    // Constructeur
-    constructor(nom: string) {
-        // Appel du constructeur de la classe de base avec le mot-clé "super"
-        super(nom);
+    constructor(nom: string, type: string, age: number) {
+        super(nom, type, age);
     }
-    // Surcharge de la méthode faireDuBruit pour les chiens
+
     public faireDuBruit(): void {
         console.log(`${this._nom} aboie.`);
+    }
+
+    public manger(): void {
+        console.log(`Le chien mange avec enthousiasme.`);
     }
 }

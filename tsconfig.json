@@ -10,7 +10,9 @@
     "./animal.ts",
     "./chat.ts",
     "./chien.ts",
-    "./main.ts"
+    "./main.ts",
+    "./oiseau.ts",
+    "./zoo.ts"
   ]
 }
   

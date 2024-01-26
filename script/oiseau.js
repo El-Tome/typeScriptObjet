@@ -16,17 +16,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var animal_js_1 = require("./animal.js");
-var Chien = /** @class */ (function (_super) {
-    __extends(Chien, _super);
-    function Chien(nom, type, age) {
+var Oiseau = /** @class */ (function (_super) {
+    __extends(Oiseau, _super);
+    function Oiseau(nom, type, age) {
         return _super.call(this, nom, type, age) || this;
     }
-    Chien.prototype.faireDuBruit = function () {
-        console.log("".concat(this._nom, " aboie."));
+    Oiseau.prototype.mouvement = function () {
+        console.log("".concat(this._nom, " vole."));
     };
-    Chien.prototype.manger = function () {
-        console.log("Le chien mange avec enthousiasme.");
-    };
-    return Chien;
+    return Oiseau;
 }(animal_js_1.default));
-exports.default = Chien;
+exports.default = Oiseau;

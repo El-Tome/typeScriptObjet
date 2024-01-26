@@ -1,17 +1,22 @@
 import Animal from './animal.js';
+
 export default class Chat extends Animal {
-    private _nombreDeVies: number;
-    // Constructeur étendu
-    constructor(nom: string, nombreDeVies: number) {
-        super(nom);
-        this._nombreDeVies = nombreDeVies;
+    private _couleur: string;
+
+    constructor(nom: string, couleur: string, type: string, age: number) {
+        super(nom, type, age);
+        this._couleur = couleur;
     }
-    // Surcharge de la méthode faireDuBruit pour les chiens
+
     public faireDuBruit(): void {
         console.log(`${this._nom} miaule.`);
     }
-    // Méthode publique pour afficher le nombre de vies restantes
-    public montrerVies(): void {
-        console.log(`${this._nom} a ${this._nombreDeVies} vies restantes.`);
+
+    public manger(): void {
+        console.log("L'animal mange.");
+    }
+
+    public afficherCouleur(): void {
+        console.log(`Le chat est de couleur ${this._couleur}.`);
     }
 }

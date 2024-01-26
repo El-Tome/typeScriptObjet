@@ -18,19 +18,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var animal_js_1 = require("./animal.js");
 var Chat = /** @class */ (function (_super) {
     __extends(Chat, _super);
-    // Constructeur étendu
-    function Chat(nom, nombreDeVies) {
-        var _this = _super.call(this, nom) || this;
-        _this._nombreDeVies = nombreDeVies;
+    function Chat(nom, couleur, type, age) {
+        var _this = _super.call(this, nom, type, age) || this;
+        _this._couleur = couleur;
         return _this;
     }
-    // Surcharge de la méthode faireDuBruit pour les chiens
     Chat.prototype.faireDuBruit = function () {
         console.log("".concat(this._nom, " miaule."));
     };
-    // Méthode publique pour afficher le nombre de vies restantes
-    Chat.prototype.montrerVies = function () {
-        console.log("".concat(this._nom, " a ").concat(this._nombreDeVies, " vies restantes."));
+    Chat.prototype.manger = function () {
+        console.log("L'animal mange.");
+    };
+    Chat.prototype.afficherCouleur = function () {
+        console.log("Le chat est de couleur ".concat(this._couleur, "."));
     };
     return Chat;
 }(animal_js_1.default));
